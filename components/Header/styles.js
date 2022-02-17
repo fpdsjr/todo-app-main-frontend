@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../assets/images/bg-desktop-dark.jpg";
+import bg from "../../assets/images/bg-desktop-dark";
 
 export const Container = styled.header`
   width: 100%;

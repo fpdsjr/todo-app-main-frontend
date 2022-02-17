@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { GlobalStyle } from "../styles/GlobalStyle";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 
 const url = "https://todo-app-prisma-express.herokuapp.com";
 
