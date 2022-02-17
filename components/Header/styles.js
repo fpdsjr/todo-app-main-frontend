@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "../../assets/images/bg-desktop-dark";
+import bg from "../../assets/images/bg-desktop-dark.jpg";
 
 export const Container = styled.header`
   width: 100%;
@@ -10,6 +10,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 
   div {
     display: flex;

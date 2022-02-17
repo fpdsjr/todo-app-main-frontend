@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import Header from "../components/Header/Header";
+import Input from "../components/Input/Input";
 
 const url = "https://todo-app-prisma-express.herokuapp.com";
 
@@ -39,6 +40,7 @@ function App() {
     <div>
       <GlobalStyle />
       <Header />
+      <Input />
     </div>
   );
 }

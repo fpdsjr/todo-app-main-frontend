@@ -1,5 +1,5 @@
 import React from "react";
-import { FiSun as Sun } from "react-icons/fi";
+import { BsSunFill as Sun } from "react-icons/bs";
 import { Container } from "./styles";
 
 function Header() {
