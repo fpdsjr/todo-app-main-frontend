@@ -16,17 +16,18 @@ export const Container = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 500px;
+    width: 540px;
+    margin-bottom: 110px;
   }
 
   h1 {
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 15px;
     font-weight: 700;
     font-size: 40px;
   }
 
   svg {
-    font-size: 30px;
+    font-size: 24px;
   }
 `;

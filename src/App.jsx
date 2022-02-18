@@ -3,6 +3,7 @@ import axios from "axios";
 import { GlobalStyle } from "../styles/GlobalStyle";
 import Header from "../components/Header/Header";
 import Input from "../components/Input/Input";
+import { Container } from "../styles/Container";
 
 const url = "https://todo-app-prisma-express.herokuapp.com";
 
@@ -37,11 +38,11 @@ function App() {
   };
 
   return (
-    <div>
+    <Container>
       <GlobalStyle />
       <Header />
       <Input />
-    </div>
+    </Container>
   );
 }
 

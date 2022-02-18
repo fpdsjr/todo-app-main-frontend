@@ -9,6 +9,7 @@ function Input() {
       <InputCheckBox>
         <input type="checkbox" defaultChecked id="checkbox" />
         <label htmlFor="checkbox"></label>
+        <input type="text" placeholder="Create a new todo..." />
       </InputCheckBox>
     </Container>
   );
