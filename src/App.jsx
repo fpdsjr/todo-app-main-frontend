@@ -6,6 +6,7 @@ import Input from "../components/Input/Input";
 import { Container } from "../styles/Container";
 import Checked from "../components/Checked/Checked";
 import { CardContainer } from "../styles/CardContainer";
+import Footer from "../components/Footer/Footer";
 
 const url = "https://todo-app-prisma-express.herokuapp.com";
 
@@ -44,8 +45,11 @@ function App() {
       <GlobalStyle />
       <Header />
       <Input />
-      {/* <Checked /> */}
-      <CardContainer></CardContainer>
+      <CardContainer>
+        <Checked />
+        <Checked />
+        <Footer />
+      </CardContainer>
     </Container>
   );
 }

@@ -1,10 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 540px;
+  width: 530px;
   height: 63px;
+  margin-bottom: 2px;
   background-color: white;
   background-color: hsl(235, 24%, 19%);
+  border-radius: 5px;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 540px;
+    height: 0.2px;
+    background: #cfcfcf;
+    margin-top: 13px;
+  }
 `;
 
 export const CheckedContainer = styled.div`
@@ -13,6 +24,7 @@ export const CheckedContainer = styled.div`
   left: 22px;
   width: 400px;
   height: 50px;
+
   label {
     background-color: hsl(235, 24%, 19%);
     border: 1px solid hsl(237, 14%, 26%);
