@@ -17,7 +17,7 @@ export const Container = styled.header`
     justify-content: space-between;
     align-items: center;
     width: 540px;
-    margin-bottom: 110px;
+    margin-bottom: 105px;
   }
 
   h1 {
