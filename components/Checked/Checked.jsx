@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-
+import axios from "axios";
 import { Container, CheckedContainer } from "./styles";
+
+const url = "https://todo-app-prisma-express.herokuapp.com";
 
 function Checked({ description, id }) {
   const [checked, setChecked] = useState("");
   const [matchesId, setMachedId] = useState(false);
-  const [doubleClickedId, setDoubleClickedId] = useState("");
+
+  const disableTodo = async (e) => {
+    const id = e.target.id;
+    const disable = await axios.put(`${url}/todo/${id}`);
+  };
 
   const toggleLineThrough = (e) => {
     setChecked(e.target.id);
@@ -13,12 +19,14 @@ function Checked({ description, id }) {
     getId.forEach((e) => {
       if (e.id === checked) {
         setMachedId(!matchesId);
+        disableTodo(e);
       }
     });
   };
 
   const handleDoubleClick = (e) => {
     setMachedId(!matchesId);
+    disableTodo(e);
   };
 
   return (

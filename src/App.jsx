@@ -55,7 +55,6 @@ function App() {
         ))}
         <Footer />
       </CardContainer>
-      {console.log(inputValue)}
     </Container>
   );
 }

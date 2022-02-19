@@ -16,7 +16,6 @@ function Input({ inputValue, setInputValue, addToDo }) {
           onKeyPress={(e) => addToDo(e)}
           placeholder="Create a new todo..."
         />
-        {console.log(inputValue)}
       </InputCheckBox>
     </Container>
   );
