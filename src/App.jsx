@@ -47,7 +47,7 @@ function App() {
       <Input />
       <CardContainer>
         <Checked />
-        <Checked />
+
         <Footer />
       </CardContainer>
     </Container>

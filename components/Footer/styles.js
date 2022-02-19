@@ -8,9 +8,13 @@ export const Container = styled.footer`
   height: 50px;
   font-size: 14px;
   color: hsl(234, 11%, 52%);
+  .active {
+    color: hsl(220, 98%, 61%);
+  }
 `;
 
 export const MiddleTextContainer = styled.div`
+  cursor: pointer;
   display: flex;
   margin-right: -60px;
   p {
