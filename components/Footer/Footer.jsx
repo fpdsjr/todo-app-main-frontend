@@ -40,7 +40,6 @@ function Footer() {
           <p>{e.phrases}</p>
         </MiddleTextContainer>
       ))}
-
       <div>
         <p>Clear Completed</p>
       </div>

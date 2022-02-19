@@ -63,4 +63,15 @@ export const CheckedContainer = styled.div`
   input[type="checkbox"]:checked + label:after {
     opacity: 1;
   }
+
+  p {
+    position: relative;
+    left: 50px;
+    top: -10px;
+    color: white;
+  }
+
+  .overline {
+    text-decoration: line-through;
+  }
 `;

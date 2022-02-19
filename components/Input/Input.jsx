@@ -7,8 +7,8 @@ function Input() {
   return (
     <Container>
       <InputCheckBox>
-        <input type="checkbox" defaultChecked id="checkbox" />
-        <label htmlFor="checkbox"></label>
+        <input type="checkbox" />
+        <label htmlFor="lol"></label>
         <input type="text" placeholder="Create a new todo..." />
       </InputCheckBox>
     </Container>

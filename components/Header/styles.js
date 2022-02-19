@@ -4,7 +4,8 @@ import bg from "../../assets/images/bg-desktop-dark.jpg";
 export const Container = styled.header`
   width: 100%;
   height: 300px;
-  background-image: url(${bg});
+  background: black;
+  /* background-image: url(${bg}); */
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
