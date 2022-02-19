@@ -11,6 +11,8 @@ function Checked({ description, id }) {
   const disableTodo = async (e) => {
     const id = e.target.id;
     const disable = await axios.put(`${url}/todo/${id}`);
+    console.log(disable);
+    return disable;
   };
 
   const toggleLineThrough = (e) => {

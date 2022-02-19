@@ -13,6 +13,7 @@ const url = "https://todo-app-prisma-express.herokuapp.com";
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [allToDos, setAllToDos] = useState([]);
+  const [filterInput, setFilterInput] = useState("");
 
   const fetchApi = async () => {
     const result = await axios.get(`${url}/listalltodo`);
@@ -50,10 +51,18 @@ function App() {
         addToDo={addToDo}
       />
       <CardContainer>
-        {allToDos.map(({ description, id }) => (
-          <Checked key={id} description={description} id={id} />
-        ))}
-        <Footer />
+        {allToDos
+          .filter((e) => {
+            if (filterInput) {
+              const verifyBoolean = filterInput === "true";
+              return e.active === verifyBoolean;
+            }
+            return e;
+          })
+          .map(({ description, id }) => (
+            <Checked key={id} description={description} id={id} />
+          ))}
+        <Footer todoLength={allToDos.length} setFilterInput={setFilterInput} />
       </CardContainer>
     </Container>
   );
