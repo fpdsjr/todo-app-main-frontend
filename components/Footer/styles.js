@@ -15,6 +15,10 @@ export const Container = styled.footer`
     background: hsl(235, 24%, 19%);
     border: none;
     margin-right: 20px;
+
+    :hover {
+      color: white;
+    }
   }
 
   .active {

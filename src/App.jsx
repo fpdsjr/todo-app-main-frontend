@@ -59,8 +59,13 @@ function App() {
             }
             return e;
           })
-          .map(({ description, id }) => (
-            <Checked key={id} description={description} id={id} />
+          .map(({ description, id, active }) => (
+            <Checked
+              key={id}
+              description={description}
+              id={id}
+              active={active}
+            />
           ))}
         <Footer todoLength={allToDos.length} setFilterInput={setFilterInput} />
       </CardContainer>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-
+import axios from "axios";
 import { Container, MiddleTextContainer } from "./styles";
+
+const url = "https://todo-app-prisma-express.herokuapp.com";
 
 function Footer({ todoLength, setFilterInput }) {
   const [activeClass, setActiveClass] = useState({
@@ -30,14 +32,18 @@ function Footer({ todoLength, setFilterInput }) {
     if (e.target.id === "Completed") {
       setFilterInput("false");
     }
-
     if (e.target.id === "Active") {
       setFilterInput("true");
     }
-
     if (e.target.id === "All") {
       setFilterInput("");
     }
+  };
+
+  const handleDelete = async () => {
+    const deleteToDo = await axios.delete(`${url}/deletetodo`);
+
+    return deleteToDo;
   };
 
   return (
@@ -57,7 +63,7 @@ function Footer({ todoLength, setFilterInput }) {
         </MiddleTextContainer>
       ))}
       <div>
-        <button>Clear Completed</button>
+        <button onClick={() => handleDelete()}>Clear Completed</button>
       </div>
     </Container>
   );
