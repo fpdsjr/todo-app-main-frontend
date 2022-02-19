@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     fetchApi();
-  }, []);
+  }, [allToDos]);
 
   const addToDo = (e) => {
     if (e.key === "Enter") {
@@ -44,13 +44,18 @@ function App() {
     <Container>
       <GlobalStyle />
       <Header />
-      <Input />
+      <Input
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        addToDo={addToDo}
+      />
       <CardContainer>
         {allToDos.map(({ description, id }) => (
           <Checked key={id} description={description} id={id} />
         ))}
         <Footer />
       </CardContainer>
+      {console.log(inputValue)}
     </Container>
   );
 }
