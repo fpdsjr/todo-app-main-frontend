@@ -5,10 +5,11 @@ import { Container, CheckedContainer } from "./styles";
 function Checked({ description, id }) {
   const [checked, setChecked] = useState("");
   const [matchesId, setMachedId] = useState(false);
+  const [doubleClickedId, setDoubleClickedId] = useState("");
 
-  const toogleLineThrough = (e) => {
+  const toggleLineThrough = (e) => {
     setChecked(e.target.id);
-    const getId = document.querySelectorAll("p");
+    const getId = document.querySelectorAll("button");
     getId.forEach((e) => {
       if (e.id === checked) {
         setMachedId(!matchesId);
@@ -16,14 +17,27 @@ function Checked({ description, id }) {
     });
   };
 
+  const handleDoubleClick = (e) => {
+    setMachedId(!matchesId);
+  };
+
   return (
     <Container>
       <CheckedContainer>
-        <input type="checkbox" id={id} onChange={(e) => toogleLineThrough(e)} />
+        <input
+          type="checkbox"
+          id={id}
+          checked={matchesId ? true : false}
+          onChange={(e) => toggleLineThrough(e)}
+        />
         <label htmlFor={id}></label>
-        <p id={id} className={matchesId ? "overline" : ""}>
+        <button
+          id={id}
+          className={matchesId ? "overline" : ""}
+          onClick={(e) => handleDoubleClick(e)}
+        >
           {description}
-        </p>
+        </button>
       </CheckedContainer>
     </Container>
   );

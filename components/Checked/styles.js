@@ -13,7 +13,7 @@ export const Container = styled.div`
     display: block;
     width: 540px;
     height: 0.2px;
-    background: #cfcfcf;
+    background: hsl(237, 14%, 26%);
     margin-top: 13px;
   }
 `;
@@ -64,14 +64,19 @@ export const CheckedContainer = styled.div`
     opacity: 1;
   }
 
-  p {
+  button {
+    font-size: 16px;
+    border: none;
+    background-color: hsl(235, 24%, 19%);
+    cursor: pointer;
     position: relative;
-    left: 50px;
-    top: -10px;
+    left: 40px;
+    top: 3px;
     color: white;
   }
 
   .overline {
     text-decoration: line-through;
+    color: hsl(234, 11%, 52%);
   }
 `;
