@@ -100,6 +100,7 @@ export const ButtonsContainer = styled.div`
   justify-content: space-between;
 
   .iconContainer {
+    visibility: hidden;
     font-size: 24px;
     visibility: normal;
     color: ${(props) => props.theme.colors.secundary};
