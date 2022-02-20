@@ -16,6 +16,13 @@ export const Container = styled.div`
     background: hsl(237, 14%, 26%);
     margin-top: 13px;
   }
+  @media (max-width: 640px) {
+    width: 450px;
+
+    &:after {
+      width: 450px;
+    }
+  }
 `;
 
 export const CheckedContainer = styled.div`
@@ -78,5 +85,10 @@ export const CheckedContainer = styled.div`
   .overline {
     text-decoration: line-through;
     color: hsl(234, 11%, 52%);
+  }
+
+  @media (max-width: 640px) {
+    label:after {
+    }
   }
 `;
