@@ -12,4 +12,10 @@ export const Container = styled.div`
     align-items: center;
     margin-top: 40px;
   }
+
+  @media (max-width: 640px) {
+    span {
+      margin-top: 120px;
+    }
+  }
 `;

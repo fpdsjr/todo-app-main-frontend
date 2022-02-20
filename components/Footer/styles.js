@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.footer`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   gap: 75px;
   height: 50px;
@@ -23,6 +23,14 @@ export const Container = styled.footer`
 
   .active {
     color: hsl(220, 98%, 61%);
+  }
+
+  @media (max-width: 640px) {
+    gap: 10px;
+
+    button {
+      margin-left: 20px;
+    }
   }
 `;
 
