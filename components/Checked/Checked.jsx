@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, CheckedContainer } from "./styles";
 
 const url = "https://todo-app-prisma-express.herokuapp.com";
 
-function Checked({ description, id, active }) {
+function Checked({ description, id, active, fetchApi }) {
   const [checked, setChecked] = useState("");
   const [matchesId, setMachedId] = useState(false);
+  const [fetching, setFetching] = useState(false);
 
   const disableTodo = async (id) => {
+    setFetching(true);
     const disable = await axios.put(`${url}/todo/${id}`);
+    setFetching(false);
     return disable;
   };
+
+  useEffect(() => {
+    fetchApi();
+  }, [fetching]);
 
   const toggleLineThrough = (e) => {
     setChecked(e.target.id);

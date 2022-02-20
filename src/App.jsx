@@ -90,6 +90,7 @@ function App() {
                             description={description}
                             id={id}
                             active={active}
+                            fetchApi={fetchApi}
                           />
                         </div>
                       )}
