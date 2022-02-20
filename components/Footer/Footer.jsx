@@ -51,17 +51,19 @@ function Footer({ todoLength, setFilterInput }) {
       <div>
         <p>{`${todoLength} items left`}</p>
       </div>
-      {activeClass.phrases.map((e, index) => (
-        <MiddleTextContainer key={index} onClick={() => toggleActive(index)}>
-          <button
-            className={toggleActiveStyles(index)}
-            id={e.phrases}
-            onClick={(e) => handleClick(e)}
-          >
-            {e.phrases}
-          </button>
-        </MiddleTextContainer>
-      ))}
+      <div className="middleContent">
+        {activeClass.phrases.map((e, index) => (
+          <MiddleTextContainer key={index} onClick={() => toggleActive(index)}>
+            <button
+              className={toggleActiveStyles(index)}
+              id={e.phrases}
+              onClick={(e) => handleClick(e)}
+            >
+              {e.phrases}
+            </button>
+          </MiddleTextContainer>
+        ))}
+      </div>
       <div>
         <button onClick={() => handleDelete()}>Clear Completed</button>
       </div>

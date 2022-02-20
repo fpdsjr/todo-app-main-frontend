@@ -15,6 +15,7 @@ export const Container = styled.div`
     background: ${(props) => props.theme.colors.afterColor};
     margin-top: 13px;
   }
+
   @media (max-width: 640px) {
     width: 450px;
 
@@ -28,8 +29,8 @@ export const CheckedContainer = styled.div`
   position: relative;
   top: 20px;
   left: 22px;
-  width: 400px;
-  height: 50px;
+  width: 460px;
+  height: 40px;
 
   label {
     background-color: ${(props) => props.theme.colors.primary};
@@ -89,5 +90,18 @@ export const CheckedContainer = styled.div`
   @media (max-width: 640px) {
     label:after {
     }
+  }
+`;
+
+export const ButtonsContainer = styled.div`
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .iconContainer {
+    font-size: 24px;
+    visibility: normal;
+    color: ${(props) => props.theme.colors.secundary};
   }
 `;

@@ -72,6 +72,10 @@ export const InputCheckBox = styled.div`
     width: 450px;
     margin-right: 50px;
     border: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   input::placeholder {

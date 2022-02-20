@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Container, CheckedContainer } from "./styles";
+import { Container, CheckedContainer, ButtonsContainer } from "./styles";
+import { IoMdClose as CloseIcon } from "react-icons/io";
 
 const url = "https://todo-app-prisma-express.herokuapp.com";
 
@@ -48,13 +49,19 @@ function Checked({ description, id, active, fetchApi }) {
           onChange={(e) => toggleLineThrough(e)}
         />
         <label htmlFor={id}></label>
-        <button
-          id={id}
-          className={matchesId || !active ? "overline" : ""}
-          onClick={(e) => handleDoubleClick(e)}
-        >
-          {description}
-        </button>
+        <ButtonsContainer>
+          <button
+            className="descriptiontext"
+            id={id}
+            className={matchesId || !active ? "overline" : ""}
+            onClick={(e) => handleDoubleClick(e)}
+          >
+            {description}
+          </button>
+          <button>
+            <CloseIcon className="iconContainer" />
+          </button>
+        </ButtonsContainer>
       </CheckedContainer>
     </Container>
   );

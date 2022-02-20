@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.footer`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 75px;
   height: 50px;
   font-size: 14px;
   color: hsl(234, 11%, 52%);
@@ -32,15 +31,19 @@ export const Container = styled.footer`
       margin-left: 20px;
     }
   }
+
+  .middleContent {
+    margin-right: 100px;
+    width: 10px;
+    display: flex;
+  }
+
+  p {
+    margin-left: 20px;
+  }
 `;
 
 export const MiddleTextContainer = styled.div`
   cursor: pointer;
   display: flex;
-  margin-right: -60px;
-  p {
-    background: hsl(235, 24%, 19%);
-    border: none;
-    margin-right: 20px;
-  }
 `;
