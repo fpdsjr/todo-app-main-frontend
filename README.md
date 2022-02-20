@@ -39,7 +39,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/fpdsjr/todo-app-main-frontend](https://github.com/fpdsjr/todo-app-main-frontend
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](todo-app-main-frontend-ov173dunu-fpdsjr.vercel.app)
 
 ## My process
 
