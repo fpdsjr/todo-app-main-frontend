@@ -49,7 +49,7 @@ function Footer({ todoLength, setFilterInput }) {
   return (
     <Container>
       <div>
-        <p>{`${todoLength} items left`}</p>
+        <p>{`${todoLength.length} items left`}</p>
       </div>
       <div className="middleContent">
         {activeClass.phrases.map((e, index) => (

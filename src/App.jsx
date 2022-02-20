@@ -98,7 +98,7 @@ function App() {
                   ))}
                 {provided.placeholder}
                 <Footer
-                  todoLength={allToDos.length}
+                  todoLength={allToDos.filter((e) => e.active === true)}
                   setFilterInput={setFilterInput}
                 />
               </CardContainer>
