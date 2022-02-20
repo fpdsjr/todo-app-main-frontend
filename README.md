@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![https://i.imgur.com/27DJdv8.png](https://i.imgur.com/27DJdv8.png)
 
 ### Links
 
