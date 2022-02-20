@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 63px;
   background-color: white;
   border-radius: 5px;
-  background-color: hsl(235, 24%, 19%);
+  background-color: ${(props) => props.theme.colors.primary};
   display: flex;
   gap: 30px;
   margin: 0 auto;
@@ -23,7 +23,7 @@ export const InputCheckBox = styled.div`
   width: 400px;
   height: 50px;
   label {
-    background-color: hsl(235, 24%, 19%);
+    background-color: ${(props) => props.theme.colors.primary};
     border: 1px solid hsl(237, 14%, 26%);
     border-radius: 50%;
     cursor: pointer;
@@ -63,8 +63,8 @@ export const InputCheckBox = styled.div`
 
   input {
     font-size: 18px;
-    color: hsl(234, 39%, 85%);
-    background-color: hsl(235, 24%, 19%);
+    color: ${(props) => props.theme.colors.text};
+    background-color: ${(props) => props.theme.colors.primary};
     position: relative;
     bottom: 28px;
     left: 45px;

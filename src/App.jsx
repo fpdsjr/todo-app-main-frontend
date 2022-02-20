@@ -50,14 +50,14 @@ function App() {
   };
 
   const toggleTheme = () => {
-    setTheme(theme.title === "dark" ? dark : light);
+    setTheme(theme.title === "light" ? dark : light);
   };
 
   return (
     <ThemeProvider theme={theme}>
       <Container>
         <GlobalStyle />
-        <Header toggleTheme={toggleTheme} />
+        <Header toggleTheme={toggleTheme} theme={theme} />
         <Input
           inputValue={inputValue}
           setInputValue={setInputValue}

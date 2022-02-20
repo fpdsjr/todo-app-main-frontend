@@ -12,7 +12,7 @@ export const Container = styled.footer`
   button {
     cursor: pointer;
     color: hsl(234, 11%, 52%);
-    background: hsl(235, 24%, 19%);
+    background: ${(props) => props.theme.colors.primary};
     border: none;
     margin-right: 20px;
 

@@ -7,6 +7,7 @@ export default {
     tertiary: "hsl(237, 14%, 26%)",
 
     text: "hsl(234, 39%, 85%)",
+    afterColor: "hsl(237, 14%, 26%)",
 
     background: "hsl(235, 21%, 11%)",
   },

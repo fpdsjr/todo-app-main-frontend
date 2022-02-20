@@ -30,6 +30,7 @@ export const Container = styled.header`
   }
 
   svg {
+    cursor: pointer;
     font-size: 24px;
   }
 

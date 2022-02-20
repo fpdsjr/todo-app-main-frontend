@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Container, CheckedContainer } from "./styles";
-import { useEffect } from "react";
 
 const url = "https://todo-app-prisma-express.herokuapp.com";
 

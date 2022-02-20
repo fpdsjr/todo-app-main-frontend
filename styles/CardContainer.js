@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
   width: 540px;
-  background-color: hsl(235, 24%, 19%);
+  background-color: ${(props) => props.theme.colors.primary};
   border-radius: 5px;
   margin: 0 auto;
   margin-top: 25px;

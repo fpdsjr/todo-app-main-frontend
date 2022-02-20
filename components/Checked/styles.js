@@ -4,8 +4,7 @@ export const Container = styled.div`
   width: 530px;
   height: 63px;
   margin-bottom: 2px;
-  background-color: white;
-  background-color: hsl(235, 24%, 19%);
+  background-color: ${(props) => props.theme.colors.primary};
   border-radius: 5px;
 
   &:after {
@@ -13,7 +12,7 @@ export const Container = styled.div`
     display: block;
     width: 540px;
     height: 0.2px;
-    background: hsl(237, 14%, 26%);
+    background: ${(props) => props.theme.colors.afterColor};
     margin-top: 13px;
   }
   @media (max-width: 640px) {
@@ -33,7 +32,7 @@ export const CheckedContainer = styled.div`
   height: 50px;
 
   label {
-    background-color: hsl(235, 24%, 19%);
+    background-color: ${(props) => props.theme.colors.primary};
     border: 1px solid hsl(237, 14%, 26%);
     border-radius: 50%;
     cursor: pointer;
@@ -74,12 +73,12 @@ export const CheckedContainer = styled.div`
   button {
     font-size: 16px;
     border: none;
-    background-color: hsl(235, 24%, 19%);
+    background-color: ${(props) => props.theme.colors.primary};
     cursor: pointer;
     position: relative;
     left: 40px;
     top: 3px;
-    color: white;
+    color: ${(props) => props.theme.colors.text};
   }
 
   .overline {
