@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     fetchApi();
-  }, []);
+  }, [inputValue, filterInput]);
 
   const addToDo = (e) => {
     if (e.key === "Enter") {
@@ -99,6 +99,7 @@ function App() {
           )}
         </Droppable>
       </DragDropContext>
+      <p>Drag and drop to reorder list</p>
     </Container>
   );
 }
