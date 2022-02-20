@@ -7,6 +7,7 @@ import { Container } from "../styles/Container";
 import Checked from "../components/Checked/Checked";
 import { CardContainer } from "../styles/CardContainer";
 import Footer from "../components/Footer/Footer";
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const url = "https://todo-app-prisma-express.herokuapp.com";
 
@@ -22,7 +23,7 @@ function App() {
 
   useEffect(() => {
     fetchApi();
-  }, [allToDos]);
+  }, []);
 
   const addToDo = (e) => {
     if (e.key === "Enter") {
@@ -41,6 +42,16 @@ function App() {
     }
   };
 
+  const handleOnDragEnd = (result) => {
+    if (!result.destination) return;
+
+    const items = Array.from(allToDos);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+
+    setAllToDos(items);
+  };
+
   return (
     <Container>
       <GlobalStyle />
@@ -50,25 +61,44 @@ function App() {
         setInputValue={setInputValue}
         addToDo={addToDo}
       />
-      <CardContainer>
-        {allToDos
-          .filter((e) => {
-            if (filterInput) {
-              const verifyBoolean = filterInput === "true";
-              return e.active === verifyBoolean;
-            }
-            return e;
-          })
-          .map(({ description, id, active }) => (
-            <Checked
-              key={id}
-              description={description}
-              id={id}
-              active={active}
-            />
-          ))}
-        <Footer todoLength={allToDos.length} setFilterInput={setFilterInput} />
-      </CardContainer>
+      <DragDropContext onDragEnd={handleOnDragEnd}>
+        <Droppable droppableId="toDos">
+          {(provided) => (
+            <CardContainer {...provided.droppableProps} ref={provided.innerRef}>
+              {allToDos
+                .filter((e) => {
+                  if (filterInput) {
+                    const verifyBoolean = filterInput === "true";
+                    return e.active === verifyBoolean;
+                  }
+                  return e;
+                })
+                .map(({ description, id, active }, index) => (
+                  <Draggable key={id} draggableId={id} index={index}>
+                    {(provided) => (
+                      <div
+                        {...provided.draggableProps}
+                        {...provided.dragHandleProps}
+                        ref={provided.innerRef}
+                      >
+                        <Checked
+                          description={description}
+                          id={id}
+                          active={active}
+                        />
+                      </div>
+                    )}
+                  </Draggable>
+                ))}
+              {provided.placeholder}
+              <Footer
+                todoLength={allToDos.length}
+                setFilterInput={setFilterInput}
+              />
+            </CardContainer>
+          )}
+        </Droppable>
+      </DragDropContext>
     </Container>
   );
 }
