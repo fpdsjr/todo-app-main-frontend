@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     fetchApi();
-  }, [inputValue, filterInput]);
+  }, [allToDos]);
 
   const addToDo = async (e) => {
     if (e.key === "Enter") {
