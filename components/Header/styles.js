@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import bg from "../../assets/images/bg-desktop-dark.jpg";
+import bgdark from "../../assets/images/bg-desktop-dark.jpg";
 import desktop from "../../assets/images/bg-mobile-dark.jpg";
+import bgwhite from "../../assets/images/bg-desktop-light.jpg";
 
 export const Container = styled.header`
   width: 100%;
   height: 300px;
-  background: black;
-  /* background-image: url(${bg}); */
+  background-image: ${(props) =>
+    props.theme.title === "dark" ? `url(${bgdark})` : `url(${bgwhite})`};
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
