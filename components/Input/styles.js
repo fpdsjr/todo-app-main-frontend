@@ -10,6 +10,10 @@ export const Container = styled.div`
   gap: 30px;
   margin: 0 auto;
   margin-top: -142px;
+
+  @media (max-width: 640px) {
+    width: 450px;
+  }
 `;
 
 export const InputCheckBox = styled.div`
@@ -73,5 +77,16 @@ export const InputCheckBox = styled.div`
   input::placeholder {
     font-size: 18px;
     color: hsl(234, 11%, 52%);
+  }
+
+  @media (max-width: 640px) {
+    input {
+      width: 380px;
+    }
+
+    input::placeholder {
+      font-size: 16px;
+      color: hsl(234, 11%, 52%);
+    }
   }
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import bg from "../../assets/images/bg-desktop-dark.jpg";
+import desktop from "../../assets/images/bg-mobile-dark.jpg";
 
 export const Container = styled.header`
   width: 100%;
@@ -30,5 +31,16 @@ export const Container = styled.header`
 
   svg {
     font-size: 24px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 20px;
+    background: black;
+    /* background-image: url(${desktop}); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+      font-size: 26px;
+    }
   }
 `;

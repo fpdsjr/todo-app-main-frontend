@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;
   background-color: hsl(235, 21%, 11%);
 
-  p {
+  span {
     color: hsl(234, 11%, 52%);
     justify-content: center;
     display: flex;

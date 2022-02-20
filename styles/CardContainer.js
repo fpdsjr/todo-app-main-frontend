@@ -6,4 +6,8 @@ export const CardContainer = styled.div`
   border-radius: 5px;
   margin: 0 auto;
   margin-top: 25px;
+
+  @media (max-width: 640px) {
+    width: 450px;
+  }
 `;

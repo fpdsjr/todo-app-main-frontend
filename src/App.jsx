@@ -99,7 +99,7 @@ function App() {
           )}
         </Droppable>
       </DragDropContext>
-      <p>Drag and drop to reorder list</p>
+      <span>Drag and drop to reorder list</span>
     </Container>
   );
 }
