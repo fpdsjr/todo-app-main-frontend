@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import bgdark from "../../assets/images/bg-desktop-dark.jpg";
-import desktop from "../../assets/images/bg-mobile-dark.jpg";
+import mobileDark from "../../assets/images/bg-mobile-dark.jpg";
 import bgwhite from "../../assets/images/bg-desktop-light.jpg";
+import mobileLight from "../../assets/images/bg-mobile-light.jpg";
 
 export const Container = styled.header`
   width: 100%;
@@ -37,8 +38,10 @@ export const Container = styled.header`
 
   @media (max-width: 640px) {
     padding: 20px;
-    background: black;
-    /* background-image: url(${desktop}); */
+    background-image: ${(props) =>
+      props.theme.title === "dark"
+        ? `url(${mobileDark})`
+        : `url(${mobileLight})`};
     background-repeat: no-repeat;
     background-size: cover;
     h1 {
