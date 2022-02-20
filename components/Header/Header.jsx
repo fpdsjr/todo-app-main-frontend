@@ -2,12 +2,12 @@ import React from "react";
 import { BsSunFill as Sun } from "react-icons/bs";
 import { Container } from "./styles";
 
-function Header() {
+function Header({ toggleTheme }) {
   return (
     <Container>
       <div>
         <h1>Todo</h1>
-        <Sun />
+        <Sun onClick={toggleTheme} />
       </div>
     </Container>
   );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: hsl(235, 21%, 11%);
+  background-color: ${(props) => props.theme.colors.background};
 
   span {
     color: hsl(234, 11%, 52%);
